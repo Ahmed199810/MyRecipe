@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parent"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/recipe_image_height"
+            android:id="@+id/img_recipe"
+            android:scaleType="centerCrop"
+            android:background="@mipmap/ic_launcher"
+            android:enabled="false"
+
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_edit_black_24dp"
+                android:id="@+id/btn_edit"
+
+                />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_delete_forever_black_24dp"
+                android:id="@+id/btn_del"
+
+                />
+
+        </LinearLayout>
+
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/recipe_title_text_size"
+            android:textColor="#000"
+            android:id="@+id/txt_recipe_title"
+            android:padding="7dp"
+            android:layout_below="@+id/img_recipe"
+            android:hint="Recipe Title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:enabled="false"
+
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_below="@+id/txt_recipe_publisher"
+            android:id="@+id/container"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="90"
+                android:textSize="@dimen/recipe_publisher_text_size"
+                android:textStyle="bold"
+                android:layout_below="@+id/txt_recipe_title"
+                android:text="Ingredients"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:textSize="@dimen/recipe_publisher_text_size"
+                android:textColor="#C50B0B"
+                android:id="@+id/txt_recipe_social_score"
+                android:gravity="center"
+                android:text="100"
+
+                />
+
+
+
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="90"
+            android:textSize="@dimen/recipe_publisher_text_size"
+            android:textStyle="bold|italic"
+            android:layout_below="@+id/txt_recipe_title"
+            android:text="Publisher is Ahmed"
+            android:id="@+id/txt_recipe_publisher"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:enabled="false"
+
+            />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@+id/container"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/container"
+            android:id="@+id/ingredients_container"
+
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_recipe_desc"
+                android:text="some description some description some description some description some description "
+                android:textSize="19dp"
+                android:textStyle="italic"
+                android:enabled="false"
+
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>
+
+
+
